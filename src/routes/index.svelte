@@ -19,14 +19,12 @@
                 const {laba5_todo} = await http.startFetchMyQuery(OperationDocsHelper.QUERY_GetAll());
                 todos.set(laba5_todo);
             }
-        }catch(e){
-            modalInfoText = internetConnectionLostMessage;
+        }catch(e){            modalInfoText = internetConnectionLostMessage;
             modalInfoIsOpen = true;
         }
     })
 
-    let auth0Clien
-    t;
+    let auth0Client;
     onMount(async () => {
         try {
             if (get(isAuthenticated)) {
