@@ -27,8 +27,8 @@ async function loginWithPopup(client, options) {
 function logoutClient(client) {
     try {
         return client.logout();
-    }catch(e){
-        throw(e);
+    } catch (e) {
+        throw e;
     }
 }
 

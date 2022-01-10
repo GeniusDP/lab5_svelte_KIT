@@ -33,7 +33,7 @@ class RequestHelper {
     executeMyMutation(operationsDoc, variables = {}) {
         try {
             return this.fetchGraphQL(operationsDoc, "MyMutation", variables);
-        }catch(e){
+        } catch (e) {
             throw e;
         }
     }
@@ -47,9 +47,9 @@ class RequestHelper {
         return data;
     }
     fetchMyQuery(operationsDoc) {
-        try{
+        try {
             return this.fetchGraphQL(operationsDoc, "MyQuery", {});
-        }catch(e){
+        } catch (e) {
             throw e;
         }
     }

@@ -1,26 +1,26 @@
 {
-  "name": "labdev-lab-5",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
-    "package": "svelte-kit package",
-    "preview": "svelte-kit preview",
-    "lint:check": "npx eslint *.js --ignore-path .gitignore --no-error-on-unmatched-pattern",
-    "lint:fix": "npx eslint --fix *.js --ignore-path .gitignore --no-error-on-unmatched-pattern",
-    "format:check": "npx prettier --check . --ignore-path .gitignore --no-error-on-unmatched-pattern",
-    "format:fix": "npx prettier --write . --ignore-path .gitignore --no-error-on-unmatched-pattern"
-  },
-  "devDependencies": {
-    "@sveltejs/adapter-auto": "next",
-    "@sveltejs/kit": "^1.0.0-next.198",
-    "prettier": "^2.5.1",
-    "svelte": "^3.44.0"
-  },
-  "type": "module",
-  "dependencies": {
-    "@auth0/auth0-spa-js": "^1.19.3",
-    "sv-bootstrap-modal": "^1.0.3",
-    "svelte-loading-spinners": "^0.1.7"
-  }
+    "name": "labdev-lab-5",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "svelte-kit dev",
+        "build": "svelte-kit build",
+        "package": "svelte-kit package",
+        "preview": "svelte-kit preview",
+        "lint:check": "npx eslint *.js --ignore-path .gitignore --no-error-on-unmatched-pattern",
+        "lint:fix": "npx eslint --fix *.js --ignore-path .gitignore --no-error-on-unmatched-pattern",
+        "format:check": "npx prettier --check . --ignore-path .gitignore --no-error-on-unmatched-pattern",
+        "format:fix": "npx prettier --write . --ignore-path .gitignore --no-error-on-unmatched-pattern"
+    },
+    "devDependencies": {
+        "@sveltejs/adapter-auto": "next",
+        "@sveltejs/kit": "^1.0.0-next.198",
+        "prettier": "^2.5.1",
+        "svelte": "^3.44.0"
+    },
+    "type": "module",
+    "dependencies": {
+        "@auth0/auth0-spa-js": "^1.19.3",
+        "sv-bootstrap-modal": "^1.0.3",
+        "svelte-loading-spinners": "^0.1.7"
+    }
 }

@@ -20,7 +20,7 @@ body {
     padding: 8px;
     box-sizing: border-box;
     font-family: -apple-system, BlinkMacSystemFont, "Century Gothic", Roboto, Oxygen-Sans, Ubuntu,
-    Cantarell, "Helvetica Neue", sans-serif;
+        Cantarell, "Helvetica Neue", sans-serif;
 }
 
 #svelte {
