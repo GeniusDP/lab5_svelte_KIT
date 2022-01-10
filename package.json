@@ -1,0 +1,21 @@
+{
+  "name": "labdev-lab-5",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
+    "package": "svelte-kit package",
+    "preview": "svelte-kit preview"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/kit": "^1.0.0-next.198",
+    "svelte": "^3.44.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "@auth0/auth0-spa-js": "^1.19.3",
+    "sv-bootstrap-modal": "^1.0.3",
+    "svelte-loading-spinners": "^0.1.7"
+  }
+}
