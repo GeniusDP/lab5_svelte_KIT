@@ -1,6 +1,7 @@
+/* eslint-disable */
 export default class OperationDocsHelper {
-    static QUERY_GetAll = () => `
-        query MyQuery {
+    QUERY_GetAll = () => {
+        return `query MyQuery {
           laba5_todo {
             body
             createdAt
@@ -8,11 +9,11 @@ export default class OperationDocsHelper {
             isChecked
             title
           }
-        }
-    `;
+        }`;
+    };
 
-    static MUTATION_InsertOne = (title, body, checked = false) => `
-        mutation MyMutation {
+    MUTATION_InsertOne = (title, body, checked = false) => {
+        return `mutation MyMutation {
           insert_laba5_todo(objects: {body: "${body}", isChecked: ${checked}, title: "${title}"}){
             affected_rows
             returning {
@@ -20,10 +21,10 @@ export default class OperationDocsHelper {
               title
             }
           }
-        }
-    `;
+        }`;
+    };
 
-    static MUTATION_DeleteByQuantity = (title) => `
+    MUTATION_DeleteByQuantity = (title) => `
         mutation MyMutation{
           delete_laba5_todo(where: {title: {_eq: "${title}"}}) {
             affected_rows

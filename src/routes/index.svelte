@@ -16,10 +16,11 @@
     token.subscribe(async(tokenValue)=>{
         try {
             if (tokenValue !== "") {
-                const {laba5_todo} = await http.startFetchMyQuery(OperationDocsHelper.QUERY_GetAll());
+                const {laba5_todo} = await http.startFetchMyQuery(new OperationDocsHelper().QUERY_GetAll());
                 todos.set(laba5_todo);
             }
-        }catch(e){            modalInfoText = internetConnectionLostMessage;
+        }catch(e){
+            modalInfoText = internetConnectionLostMessage;
             modalInfoIsOpen = true;
         }
     })
@@ -28,7 +29,7 @@
     onMount(async () => {
         try {
             if (get(isAuthenticated)) {
-                const {laba5_todo} = await http.startFetchMyQuery(OperationDocsHelper.QUERY_GetAll());
+                const {laba5_todo} = await http.startFetchMyQuery(new OperationDocsHelper().QUERY_GetAll());
                 todos.set(laba5_todo);
             }
             auth0Client = await auth.createClient();
@@ -73,7 +74,7 @@
         if(isAuthenticated){
             try{
                 const {insert_laba5_todo} = await http.
-                startExecuteMyMutation(OperationDocsHelper.MUTATION_InsertOne(title, body));
+                startExecuteMyMutation(new OperationDocsHelper().MUTATION_InsertOne(title, body));
                 todos.update(n => [...n, insert_laba5_todo?.returning[0]]);
             }
             catch(e){
@@ -97,7 +98,7 @@
         }
         if(isAuthenticated){
             try {
-                await http.startExecuteMyMutation(OperationDocsHelper.MUTATION_DeleteByQuantity(title));
+                await http.startExecuteMyMutation(new OperationDocsHelper().MUTATION_DeleteByQuantity(title));
                 todos.update(n => n.filter(item => item?.title !== title));
             }catch(e){
                 modalInfoText = internetConnectionLostMessage;

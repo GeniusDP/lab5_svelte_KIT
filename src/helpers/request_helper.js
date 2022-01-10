@@ -4,6 +4,8 @@ import { get } from "svelte/store";
 class RequestHelper {
     //to string casting because this.API_URL in
     //lines after generates warning
+
+    //eslint-disable-next-line
     API_URL = import.meta.env.VITE_API_URL.toString();
     async fetchGraphQL(operationsDoc, operationName, variables) {
         const result = await fetch(this.API_URL, {
