@@ -1,21 +1,35 @@
 {
-  "name": "labdev-lab-5",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
-    "package": "svelte-kit package",
-    "preview": "svelte-kit preview"
-  },
-  "devDependencies": {
-    "@sveltejs/adapter-auto": "next",
-    "@sveltejs/kit": "^1.0.0-next.198",
-    "svelte": "^3.44.0"
-  },
-  "type": "module",
-  "dependencies": {
-    "@auth0/auth0-spa-js": "^1.19.3",
-    "sv-bootstrap-modal": "^1.0.3",
-    "svelte-loading-spinners": "^0.1.7"
-  }
+    "name": "labdev-lab-5",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "svelte-kit dev",
+        "build": "svelte-kit build",
+        "package": "svelte-kit package",
+        "preview": "svelte-kit preview",
+        "lint:check": "npx eslint **/*.js --ignore-path .gitignore operation_docs.js request_helper.js --no-error-on-unmatched-pattern",
+        "lint:fix": "npx eslint --fix **/*.js --ignore-path .gitignore operation_docs.js request_helper.js --no-error-on-unmatched-pattern",
+        "format:check": "npx prettier --check . --ignore-path .gitignore ",
+        "format:fix": "npx prettier --write . --ignore-path .gitignore",
+        "prepare": "husky install"
+    },
+    "devDependencies": {
+        "@babel/eslint-parser": "^7.16.5",
+        "@sveltejs/adapter-auto": "next",
+        "@sveltejs/kit": "^1.0.0-next.198",
+        "eslint": "^8.0.0-rc.0",
+        "eslint-plugin-react": "^7.28.0",
+        "eslint-plugin-sonarjs": "^0.11.0",
+        "husky": "^7.0.4",
+        "prettier": "^2.5.1",
+        "svelte": "^3.44.0"
+    },
+    "type": "module",
+    "dependencies": {
+        "@sveltejs/adapter-auto": "next",
+        "@sveltejs/kit": "^1.0.0-next.198",
+        "@auth0/auth0-spa-js": "^1.19.3",
+        "babel-eslint": "^10.1.0",
+        "sv-bootstrap-modal": "^1.0.3",
+        "svelte-loading-spinners": "^0.1.7"
+    }
 }

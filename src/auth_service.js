@@ -3,8 +3,8 @@ import createAuth0Client from "@auth0/auth0-spa-js";
 
 async function createClient() {
     return await createAuth0Client({
-        domain: import.meta.env.VITE_DOMAIN,
-        client_id: import.meta.env.VITE_CLIENT_ID,
+        domain: import.meta.env.VITE_DOMAIN.toString(),
+        client_id: import.meta.env.VITE_CLIENT_ID.toString(),
     });
 }
 
@@ -25,11 +25,7 @@ async function loginWithPopup(client, options) {
 }
 
 function logoutClient(client) {
-    try {
-        return client.logout();
-    }catch(e){
-        throw(e);
-    }
+    return client.logout();
 }
 
 const auth = {
