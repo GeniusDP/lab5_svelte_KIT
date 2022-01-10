@@ -9,11 +9,15 @@
         "lint:check": "npx eslint *.js --ignore-path .gitignore --no-error-on-unmatched-pattern",
         "lint:fix": "npx eslint --fix *.js --ignore-path .gitignore --no-error-on-unmatched-pattern",
         "format:check": "npx prettier --check . --ignore-path .gitignore --no-error-on-unmatched-pattern",
-        "format:fix": "npx prettier --write . --ignore-path .gitignore --no-error-on-unmatched-pattern"
+        "format:fix": "npx prettier --write . --ignore-path .gitignore --no-error-on-unmatched-pattern",
+        "prepare": "husky install"
     },
     "devDependencies": {
         "@sveltejs/adapter-auto": "next",
         "@sveltejs/kit": "^1.0.0-next.198",
+        "eslint": "^8.6.0",
+        "eslint-plugin-sonarjs": "^0.11.0",
+        "husky": "^7.0.4",
         "prettier": "^2.5.1",
         "svelte": "^3.44.0"
     },
