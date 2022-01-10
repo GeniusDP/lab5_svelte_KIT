@@ -25,7 +25,8 @@
         }
     })
 
-    let auth0Client;
+    let auth0Client
+    ;
     onMount(async () => {
         try {
             if (get(isAuthenticated)) {
